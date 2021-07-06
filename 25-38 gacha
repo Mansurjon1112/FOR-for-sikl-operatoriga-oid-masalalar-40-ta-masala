@@ -1,0 +1,214 @@
+#For25. n butun soni va x haqiqiy soni berilgan (n > 0, |x| < 1). Quyidagi yig’indini hisoblovchi programma tuzilsin.
+#x – x2 / 2 + x3 / 3 - … +(-1)n – 1 xn / n
+'''n = int(input("n="))
+x = int(input("x="))
+s = 0
+
+if n < 0 and abs(x)>1:
+    print(exit("n 0 dan katta bo'lsin"))
+else:
+    for i in range(1, n+1):
+
+        s = s + ((-1)  (i-1)) * (x  i) / i
+
+print(s)'''
+
+#For26. n butun soni va x haqiqiy soni berilgan (n > 0, |x| < 1). Quyidagi yig’indini hisoblovchi programma tuzilsin.
+#    x – x3 / 3 + x5 / 5 - … +(-1)n x2n+1 / (2n + 1)
+
+'''n = int(input("n="))
+x = int(input("x="))
+s = 0
+
+if (n < 0) and (abs(x)>1):
+    print(exit("n 0 dan katta bo'lsin"))
+else:
+    for i in range( 2*n+2):
+
+        s = s + ((-1)  i) * (x  (2*i+1)) /(2*i+1) 
+
+print(s)'''
+
+#For27. n butun soni va x haqiqiy soni berilgan (n > 0, |x| < 1). Quyidagi yig’indini hisoblovchi programma tuzilsin.
+# x + 1 * x3 / (2 * 3) + 1*3*x5 / (2*4*5) + … + + 1*3* …*(2*n-1)*x2n+1 /(2*4*..*(2*n)*(2*n+1)
+
+'''n = int(input("n="))
+x = int(input("x="))
+s = x
+l=1
+p=1
+if (n < 0) and (abs(x)>1):
+    print(exit("n 0 dan katta bo'lsin"))
+else:
+
+    for i in range(1,2*n-1,2):
+        l*=i
+        p=p*(i+1)
+        s=s+l*(x**(i+2))/(p*(i+2))
+
+      
+print(s)'''
+#For28. n butun soni va x haqiqiy soni berilgan (n > 0, |x| < 1). Quyidagi yig’indini hisoblovchi programma tuzilsin.
+#     1+ x / 2 - 1 * x2 / (2 * 4) + 1*3*x3 / (2*4*6) - 1*3*5*x4/(2*4*6*8)… ++ (-1)n-1 *1*3* …*(2*n-3)*xn /(2*4*..*(2*n))
+
+'''n = int(input("n="))
+x = int(input("x="))
+s = 1
+l = 1
+p = 1
+ish=-1
+if (n < 0) and (abs(x) > 1):
+    print(exit("n 0 dan katta bo'lsin"))
+else:
+
+    for i in range(1, n):
+        l *= 2*i-3
+        p *=2*i
+        s = s + ish*l *  x ** i  / p
+        print(ish*l ,  i  ,  p)
+        ish*=-1
+
+
+print(s)'''
+
+# For29. n butun soni va sonlar o’qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A, B] kesmani
+# teng n ta kesmaga bo’ling. [A, B] kesmada ajratilgan barcha nuqtalarni chiqaring.
+
+'''n = int(input("n="))
+a = float(input("a="))
+b = float(input("b="))
+x=a
+ab=abs(b-a)
+l=ab//n
+for i in range(n-1):
+    x+=l
+    print(x)'''
+
+#For30. n butun soni va sonlar o’qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A, B] kesmani
+# teng n ta kesmaga bo’ling. [A, B] kesmada ajratilgan barcha nuqtalar uchun F(X) = 1 – sin(X) funksiya qiymatini hisoblang.
+
+'''from  math  import*
+n = int(input("n="))
+a = float(input("a="))
+b = float(input("b="))
+x=a
+ab=abs(b-a)
+l=ab//n
+for i in range(n-1):
+    x+=l
+    y=1-sin(x)
+    print(y)'''
+
+# For31. n butun soni berilgan (n > 0). Quyidagi ketma – ketlikning dastlabki n ta hadini chiqaruvchi
+# programma tuzilsin.   A0 = 2; AK = 2 + 1 / AK-1; K = 1, 2, …
+
+
+'''n = int(input("n="))
+a=2
+
+
+for i in range(1,n+1):
+    a=2+1/a
+
+    print("a",i,"=",a)'''
+
+#For32. n butun soni berilgan (n > 0). Quyidagi ketma – ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
+#   A0 = 1; AK = (AK-1 + 1) / K; K = 1, 2,
+
+'''n = int(input("n="))
+a=1
+
+
+for i in range(1,n+1):
+    a=(a+1)/i
+
+    print("a",i,"=",a)'''
+
+#For33. n butun soni berilgan (n > 1). Fibonachchi ketma – ketlikning dastlabki n ta hadini
+# chiqaruvchi programma tuzilsin. F1 = 1; F2 = 1; FK = FK-2 + FK-1; K = 3, 4, …
+
+'''n = int(input("n="))
+f1=1
+f2=1
+print(f1)
+print(f2)
+for i in range(3,n+1):
+    f2=f1+f2
+    print(f2)
+
+    f1,f2=f2,f1'''
+
+#For34. n butun soni berilgan (n > 1). Quyidagi ketma – ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
+# A1 = 1; A2 = 2; AK = (AK-2 + 2*AK-1) / 3; K = 3, 4, …
+
+'''n = int(input("n="))
+a1=1
+a=2
+print("a1=",a1)
+print("a2=",a)
+for i in range(3,n+1):
+    a=(a1+2*a)/3
+    print("a",i,"=",a)'''
+
+#For35. n butun soni berilgan (n > 2). Quyidagi ketma – ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
+#  A1 = 1; A2 = 2; A3 = 3; AK = AK-1 + AK-2 - 2*AK-3; K = 4, 5, …
+
+'''n = int(input("n="))
+a1=1
+a2=2
+a=3
+print("a1=",a1)
+print("a2=",a2)
+print("a3=",a)
+for i in range(4,n+1):
+    a=(a+a2-2*a1-3)/3
+    print("a",i,"=",a)'''
+
+#For36. N va K butun sonlari berilgan. Quyidagi yig’indini chiqaruvchi programma tuzilsin. 1K + 2K + … + NK
+'''n = int(input("n="))
+k = int(input("k="))
+s=0
+for i in range(1,n+1):
+    s=s+i**k
+print(s)'''
+# 2-usul
+'''n = int(input("n="))
+k = int(input("k="))
+s=0
+for i in range(1,n+1):
+    p=1
+    for j in range(k):
+        p*=i
+    s = s + p
+print(s)'''
+
+#For37. N butun soni berilgan. Quyidagi yig’indini chiqaruvchi programma tuzilsin.  11 + 22 + … + NN
+#1-usul
+'''n = int(input("n="))
+
+s=0
+for i in range(1,n+1):
+    s=s+i**i
+print(s)'''
+#2-usul
+
+'''n = int(input("n="))
+
+s=0
+for i in range(1,n+1):
+    p=1
+    for j in range(i):
+        p*=i
+    s = s + p
+print(s)'''
+
+# For38. N butun soni berilgan. Quyidagi yig’indini chiqaruvchi programma tuzilsin.  1N + 2N-1 + … + N1
+n = int(input("n="))
+
+s=0
+for i in range(1,n+1):
+    p=1
+    for j in range(n-i+1):
+        p*=i
+    s = s + p
+print(s)
