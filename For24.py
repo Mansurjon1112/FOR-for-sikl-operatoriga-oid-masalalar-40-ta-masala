@@ -13,13 +13,14 @@ n = int(input('n = '))
 x = float(input('x = '))
 fac=1
 sum=1
-ishora = 1
+ishora = -1
 if n>0 : 
     for i in range(1,2*n+1):
         fac*=i      
         if i%2 == 0:
             surat = ishora * x**i
             sum+=surat/fac
+            print(surat, fac)
             ishora*=-1
     print('Yig\'indi:',sum)
 else:
