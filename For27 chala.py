@@ -9,11 +9,9 @@ Created on Thu Jun 24 21:35:20 2021
 
 @author: Mansurjon Kamolov
 """
-
 n = int(input('n = '))
 x = float(input('x = '))
-sum=1
-ishora = 1
+sum=x
 surat = 1
 maxraj = 1 
 sum = 0
@@ -22,8 +20,6 @@ if n>0 and abs(x)<1 :
         surat *= i   
         maxraj *= (i+1)
         sum = surat * x**(i+2) / maxraj * (i + 2)
-        
     print('Yig\'indi:',sum)
 else:
     print('x yoki n masala shartini qanoatlantirmaydi. ')
-
