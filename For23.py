@@ -12,7 +12,7 @@ Created on Thu Jun 24 21:17:18 2021
 n = int(input('n = '))
 x = float(input('X = '))
 fac=1
-sum=1
+sum=0
 ishora = 1
 if n>0 : 
     for i in range(1,2*n+2):
