@@ -20,7 +20,6 @@ if n>0 :
         if i%2 == 0:
             surat = ishora * x**i
             sum+=surat/fac
-            print(surat, fac)
             ishora*=-1
     print('Yig\'indi:',sum)
 else:
