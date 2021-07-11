@@ -11,6 +11,6 @@ Created on Thu Jun 24 19:03:27 2021
 
 n = int(input('N= '))
 sum= 0
-for i in range(11,10*n+1):
+for i in range(11,11+n):
     sum+=i/10*(-1)**(i-1)
 print(sum)
