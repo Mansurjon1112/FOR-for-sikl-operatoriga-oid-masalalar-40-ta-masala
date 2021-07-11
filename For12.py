@@ -10,7 +10,7 @@ Created on Thu Jun 24 18:57:29 2021
 
 n = int(input('N= '))
 kup=1
-for i in range(10,10*n+1):
+for i in range(11,11+n):
     kup*=i/10
-    print(i, kup)
-print(sum, 10*n+1)
+    #print(i, kup)
+print(kup)
